@@ -3,7 +3,7 @@ interface Xmen{
   poder:string
 }
 
-
+import {maloso, perroso} from "../clases/index"
 
 
 function enviarMision(xmen:Xmen){
@@ -27,9 +27,12 @@ class Avenger{
   puedePelear:boolean;
   peleasGanadas:number;
   constructor( nombre:string, equipo:string, nombreReal:string ){
+this.nombre=nombre;
+this.equipo=equipo;
+this.nombreReal=nombreReal;
 
   }
 }
 
-let antman:Avenger = new Avenger();
+let antman:Avenger = new Avenger("Pepe","Poco","Pillo");
 console.log(antman);
