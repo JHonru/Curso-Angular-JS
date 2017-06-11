@@ -3,7 +3,8 @@ function consola (constructor:Function){
 }
 @consola
 class maloso{
-  constructor(public nombre:string){
+  nombre:string;
+  constructor(nombre:string){
 
   }
 }
