@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function enviarMision(xmen) {
     console.log("Enviando a: " + xmen.nombre);
 }
