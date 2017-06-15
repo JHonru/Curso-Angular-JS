@@ -10,7 +10,8 @@ import {FooterComponent} from './components/footer.component';
   imports:      [ BrowserModule ],
   declarations: [ AppComponent,
                   HeaderComponent,
-                BodyComponent,FooterComponent],
+                  BodyComponent,
+                  FooterComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
