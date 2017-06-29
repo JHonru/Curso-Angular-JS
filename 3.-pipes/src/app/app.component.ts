@@ -35,5 +35,9 @@ valorPromesa = new Promise(( resolve,reject)=>{
 
 fecha=new Date();
 
+video="QLN-a2w568M";
+
+activar:boolean = true;
+
 
 }

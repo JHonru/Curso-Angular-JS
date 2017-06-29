@@ -110,6 +110,13 @@
         <td>capitaliza</td>
         <td>{{nombre2 | capitaliza:false}}</td>
       </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>contrasena:{{activar}}</td>
+        <br>
+        <button (click)="activar=!activar" type="button" class="btn btn-primary-outline">Activar/Desactivar</button>
+        <td>{{nombre|contrasena:activar}}</td>
+      </tr>
     </tbody>
   </table>
 
@@ -120,5 +127,8 @@
   <hr>
 <h4>JSON</h4>
 <pre>{{heroe | json }}</pre>
+<h4>Video <small>Youtube</small></h4>
+
+<iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allowfullscreen></iframe>
 
 </div>
