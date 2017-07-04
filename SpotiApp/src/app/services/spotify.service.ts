@@ -17,13 +17,16 @@ urlBusqueda:string="https://api.spotify.com/v1/search";
 
     let headers = new Headers();
 
-    headers.append( 'authorization','Bearer BQCd7QgwjvmfJdzA9vWOu7U-DV-o2TCCY-XXzHgsovP5AqZUyqfciS-SWBxmD6QpgWfEWyuyCbHzhqNem9D2MA');
+    headers.append( 'authorization','Bearer BQCo7GKrKDJfxe23BVXiKXjeZ9ULmMnR4yDMWqq86HoBAPUl5oU9CoJkghxedtDTguF_tIDyeaxywJWRb8vnkg');
 
-    let query=`q=${ termino }&type=artist`;
+    let query=`?q=${ termino }&type=artist`;
     let url = this.urlBusqueda + query;
 
     return this.http.get( url, { headers } ).map( res =>{
-      console.log(res);
+      //console.log(res.json().artists.items);
+    this.artistas=res.json().artists.items;
+    console.log(this.artistas);
+    return res.json().artists.items;
     })
 
   }
