@@ -24,8 +24,10 @@ token:string="";
   getArtistas( termino:string ){
 
     let headers = new Headers();
-
-    headers.append( 'authorization','Bearer BQCy5SUxj2MvYCdSK_ABag9xrV9wm9BffThYLNb6WQdGPpyY1qhuCWIz4G3oO-GDzPuicjsfqm6-BJa-U5-30w');
+    let token = this.getToken();
+    console.log(token);
+    let cabecera="Bearer "+token;
+    headers.append( 'authorization', cabecera);
 
     let query=`?q=${ termino }&type=artist`;
     let url = this.urlBusqueda + query;
@@ -38,13 +40,16 @@ token:string="";
     })
 
   }
-//getToken(){
-//
-//  let query=`?client_id=${this.client_id}&client_secret=${this.client_secret}&grant_type=client_credentials`
-//  let url=this.urlToken + query;
-//   this.token= this.http.post(url).map( res=>{ return res.json().access_token;});
-//
-//}
+getToken(){
+
+  let query=`?client_id=${this.client_id}&client_secret=${this.client_secret}&grant_type=client_credentials`
+  let url=this.urlToken + query;
+   return this.http.post(url,"").map(res=>{
+     console.log(res.json().access_token);
+     return res.json().access_token;
+   })
+
+}
 
 
 
