@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SpotifyService} from '../../services/spotify.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +11,9 @@ export class SearchComponent implements OnInit {
 
   termino:string="";
 
-  constructor( private _spotifyService:SpotifyService ) { }
+  constructor( private _spotifyService:SpotifyService ) {
+
+   }
 
   ngOnInit() {
 
