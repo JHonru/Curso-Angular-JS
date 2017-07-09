@@ -11,7 +11,10 @@ hr{
 .jumbotron{
   background-color: #171717;
 }
-
+.img-50{
+  height: 50px;
+  width: 50px;
+}
 .puntero{
   cursor: pointer;
 }
