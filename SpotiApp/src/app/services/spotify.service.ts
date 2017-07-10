@@ -17,7 +17,7 @@ client_secret="1697f79545fc4860a1d510896768d69d";
 urlBusqueda:string="https://api.spotify.com/v1/search";
 urlArtista:string="https://api.spotify.com/v1/artists";
 urlToken:string="https://accounts.spotify.com/api/token";
-token:string="BQDDLKroL9ElR-5zKov93y3PTuFsYrji-YArrYkhclW5P2DSxEe0_1x6na3XGc-vEyDTxKoKTxxxd5S_mwjWIg";
+token:string="BQC-ke5uFWQ-QBhbAP7N6oUt2cxzX8L9w1HyWc_DZxGs3ywCfel0v0wBO76yRANxNTyrZzcJ6VFhXS3QI1p7mQ";
 
 
   constructor( private http:Http ) { }

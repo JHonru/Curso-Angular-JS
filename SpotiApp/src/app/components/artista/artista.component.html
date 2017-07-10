@@ -40,10 +40,10 @@
 
         <tr *ngFor="let cancion of top; let i = index">
           <td>
-              <img src="{{cancion.album?.images|sinfoto}}" alt="{{cancion.name}}" class="img-fluid img-thumbnail img-50">
+              #{{i+1}}
           </td>
-          <td>
-              {{i+1}}
+          <td>            
+              <img src="{{cancion.album?.images|sinfoto}}" alt="{{cancion.name}}" class="img-fluid img-thumbnail img-50">
           </td>
           <td>
               {{cancion.name}}
@@ -51,9 +51,7 @@
           <td>
               {{cancion.popularity}}%
           </td>
-          <td>
-              {{cancion.popularity}}
-          </td>
+
           <td>
             <iframe [src]="cancion.uri |domseguro:'https://open.spotify.com/embed?uri='"
             width="300" height="80" frameborder="0" allowtransparency="true">
